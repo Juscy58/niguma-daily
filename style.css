@@ -185,6 +185,20 @@ body {
 
 .section-sub { color: #666; font-size: 0.95rem; }
 
+/* UPDATE BANNER */
+.update-banner {
+    text-align: center;
+    background: linear-gradient(135deg, rgba(147,51,234,0.15), rgba(236,72,153,0.1));
+    border: 1px solid rgba(147,51,234,0.3);
+    border-radius: 50px;
+    padding: 12px 24px;
+    font-size: 0.88rem;
+    color: var(--purple-light);
+    max-width: 500px;
+    margin: 0 auto 40px;
+    letter-spacing: 0.5px;
+}
+
 /* PICKS GRID */
 .picks-grid {
     display: grid;
