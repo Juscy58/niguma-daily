@@ -3,113 +3,156 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Niguma Daily — Fashion & Lifestyle Picks</title>
-    <meta name="description" content="Niguma Daily — Honest Amazon product reviews. Dark aesthetic fashion and lifestyle picks.">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <title>Niguma Daily — Honest Amazon Reviews India</title>
+    <meta name="description" content="Honest Amazon product reviews — Fashion, Beauty, Home & Kitchen. Best picks for India. Curated by Niguma.">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
+    <style>
+        .cat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; max-width: 1100px; margin: 0 auto; }
+        .cat-card { background: #fff; border: 1.5px solid var(--border); border-radius: 24px; padding: 36px 28px; text-align: center; text-decoration: none; transition: all 0.3s; box-shadow: 0 4px 16px var(--shadow); display: block; }
+        .cat-card:hover { transform: translateY(-6px); box-shadow: 0 12px 40px var(--shadow); border-color: var(--purple); }
+        .cat-icon { font-size: 3rem; margin-bottom: 14px; display: block; }
+        .cat-name { font-family: 'Playfair Display', serif; font-size: 1.4rem; color: var(--text); margin-bottom: 8px; }
+        .cat-count { color: var(--text-light); font-size: 0.82rem; margin-bottom: 16px; }
+        .cat-btn { display: inline-block; background: linear-gradient(135deg, var(--purple), var(--pink)); color: #fff; padding: 10px 24px; border-radius: 50px; font-size: 0.82rem; font-weight: 600; }
+        .cat-card.fashion { border-color: #c4b5fd; }
+        .cat-card.fashion:hover { border-color: var(--purple); }
+        .cat-card.beauty { border-color: #fbcfe8; }
+        .cat-card.beauty:hover { border-color: var(--pink); }
+        .cat-card.home { border-color: #bbf7d0; }
+        .cat-card.home:hover { border-color: #16a34a; }
+        .cat-card.local { border-color: #fde68a; }
+        .cat-card.local:hover { border-color: #ca8a04; }
+        .featured-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; max-width: 1100px; margin: 0 auto; }
+        .feat-prod { background: #fff; border: 1.5px solid var(--border); border-radius: 20px; overflow: hidden; transition: all 0.3s; }
+        .feat-prod:hover { transform: translateY(-4px); box-shadow: 0 10px 30px var(--shadow); }
+        .fp-top { padding: 28px; text-align: center; background: linear-gradient(135deg, var(--purple-light), #fce7f3); }
+        .fp-emoji { font-size: 3.5rem; display: block; margin-bottom: 8px; }
+        .fp-brand { font-size: 0.68rem; letter-spacing: 3px; color: var(--purple); font-weight: 700; margin-bottom: 6px; }
+        .fp-body { padding: 20px; }
+        .fp-name { font-family: 'Playfair Display', serif; font-size: 1.05rem; color: var(--text); margin-bottom: 8px; }
+        .fp-rating { font-size: 0.8rem; color: var(--text-light); margin-bottom: 14px; }
+        .fp-links { display: flex; gap: 8px; }
+        .fp-buy { flex: 1; background: linear-gradient(135deg, var(--purple), var(--pink)); color: #fff; padding: 10px; border-radius: 10px; text-decoration: none; font-size: 0.8rem; font-weight: 600; text-align: center; }
+        .fp-review { flex: 1; border: 1.5px solid var(--border); color: var(--purple); padding: 10px; border-radius: 10px; text-decoration: none; font-size: 0.8rem; font-weight: 500; text-align: center; }
+        @media(max-width:768px) { .cat-grid { grid-template-columns: 1fr 1fr; gap: 12px; } .cat-card { padding: 24px 16px; } .cat-icon { font-size: 2.2rem; } .cat-name { font-size: 1.1rem; } }
+        @media(max-width:400px) { .cat-grid { grid-template-columns: 1fr; } }
+    </style>
 </head>
 <body>
-    <div class="cursor-glow" id="cursorGlow"></div>
+<div class="cursor-glow" id="cursorGlow"></div>
 
-    <nav class="navbar" id="navbar">
-        <div class="nav-logo">✦ Niguma Daily</div>
-        <div class="nav-links">
-            <a href="#pick">This Week's Pick</a>
-            <a href="#about">About</a>
+<nav class="navbar" id="navbar">
+    <div class="nav-logo">✦ Niguma Daily</div>
+    <div class="nav-links">
+        <a href="./fashion.html">Fashion</a>
+        <a href="./beauty.html">Beauty</a>
+        <a href="./home.html">Home</a>
+    </div>
+    <div class="nav-tag">Amazon Curated</div>
+</nav>
+
+<section class="hero">
+    <div class="hero-bg-orb orb1"></div>
+    <div class="hero-bg-orb orb2"></div>
+    <div class="hero-bg-orb orb3"></div>
+    <div class="hero-content">
+        <div class="hero-badge">✦ Honest Reviews. Real Picks.</div>
+        <h1 class="hero-title">Find Products<br><span class="gradient-text">Worth Buying.</span></h1>
+        <p class="hero-sub">Curated Amazon India picks — Fashion, Beauty, Home & Local Products. Every link is tested and honest.</p>
+        <div class="hero-btns">
+            <a href="#categories" class="btn-primary">Browse Categories</a>
+            <a href="./home.html" class="btn-ghost">🏠 Home Picks →</a>
         </div>
-        <div class="nav-tag">Amazon Curated</div>
-    </nav>
+    </div>
+    <div class="hero-scroll">scroll ↓</div>
+</section>
 
-    <!-- Hero -->
-    <section class="hero">
-        <div class="hero-bg-orb orb1"></div>
-        <div class="hero-bg-orb orb2"></div>
-        <div class="hero-bg-orb orb3"></div>
-        <div class="hero-content">
-            <div class="hero-badge">✦ Honest Reviews. Real Picks.</div>
-            <h1 class="hero-title">
-                One Product.<br>
-                <span class="gradient-text">100% Honest.</span>
-            </h1>
-            <p class="hero-sub">I test and review one Amazon product at a time — so you always know what you're getting before you buy.</p>
-            <div class="hero-btns">
-                <a href="#pick" class="btn-primary">See This Week's Pick</a>
-                <a href="#about" class="btn-ghost">About Me →</a>
-            </div>
-        </div>
-        <div class="hero-scroll">scroll ↓</div>
-    </section>
+<!-- Categories -->
+<section id="categories" class="section">
+    <div class="section-header">
+        <span class="section-tag">✦ Shop By Category</span>
+        <h2 class="section-title">What Are You Looking For?</h2>
+        <p class="section-sub">Har category mein best Amazon India picks — honest reviews ke saath</p>
+    </div>
+    <div class="cat-grid">
+        <a href="./fashion.html" class="cat-card fashion">
+            <span class="cat-icon">👕</span>
+            <div class="cat-name">Fashion</div>
+            <div class="cat-count">5 Products · Van Heusen, Symbol</div>
+            <span class="cat-btn">Browse →</span>
+        </a>
+        <a href="./beauty.html" class="cat-card beauty">
+            <span class="cat-icon">💄</span>
+            <div class="cat-name">Beauty</div>
+            <div class="cat-count">5 Products · NYX, Mamaearth, Nivea</div>
+            <span class="cat-btn">Browse →</span>
+        </a>
+        <a href="./home.html" class="cat-card home">
+            <span class="cat-icon">🏠</span>
+            <div class="cat-name">Home & Kitchen</div>
+            <div class="cat-count">4 Products · Milton, Prestige</div>
+            <span class="cat-btn">Browse →</span>
+        </a>
+    </div>
+</section>
 
-    <!-- Single Featured Product -->
-    <section id="pick" class="section">
-        <div class="section-header">
-            <span class="section-tag">⭐ This Week's Pick</span>
-            <h2 class="section-title">Van Heusen Hipster</h2>
-            <p class="section-sub">Dark Assorted — Premium Innerwear on Amazon India</p>
-        </div>
-
-        <div class="single-product">
-            <div class="product-visual">
-                <div class="product-img-box">
-                    <div class="product-brand">VAN HEUSEN</div>
-                    <img src="./product.jpg" alt="Van Heusen Hipster Dark Assorted" style="width:100%;max-width:240px;border-radius:12px;margin:10px 0;position:relative;z-index:1;">
-                    <div class="product-label">Hipster — Dark Assorted</div>
-                    <div class="product-sizes">S &nbsp;·&nbsp; M &nbsp;·&nbsp; L &nbsp;·&nbsp; XL &nbsp;·&nbsp; XXL</div>
-                </div>
-                <div class="product-badge-row">
-                    <span class="pbadge">Premium Cotton</span>
-                    <span class="pbadge">Anti-fade</span>
-                    <span class="pbadge">Dark Aesthetic</span>
-                </div>
-            </div>
-
-            <div class="product-details">
-                <div class="product-rating">
-                    <span class="stars">⭐⭐⭐⭐⭐</span>
-                    <span class="rating-num">4.8 / 5</span>
-                    <span class="rating-label">Niguma's Rating</span>
-                </div>
-                <h3 class="product-name">Van Heusen Hipster <span class="gradient-text">Dark Assorted</span></h3>
-                <p class="product-desc">Yeh innerwear meri daily life ka part ban gaya hai. Soft fabric, perfect fit, aur woh dark colors jo kabhi fade nahi hote — yeh sab ek premium brand ka mark hai.</p>
-                <p class="product-desc">Agar tum ek aise innerwear ki talash mein ho jo dinn bhar comfortable rahe aur stylish bhi lage — yeh wahi hai.</p>
-
-                <div class="mini-pros">
-                    <div class="mini-pro">✅ All-day comfort</div>
-                    <div class="mini-pro">✅ Dark colors don't fade</div>
-                    <div class="mini-pro">✅ Strong elastic waistband</div>
-                    <div class="mini-pro">✅ Breathable fabric</div>
-                    <div class="mini-pro">✅ Machine washable</div>
-                    <div class="mini-pro">✅ Premium brand quality</div>
-                </div>
-
-                <div class="product-ctas">
-                    <a href="./van-heusen-hipster-review.html" class="btn-primary">Read Full Review</a>
-                    <a href="https://amzn.to/4lTySBv" target="_blank" rel="nofollow" class="btn-ghost">Buy on Amazon →</a>
+<!-- Featured Picks -->
+<section class="section" style="background:#fff;">
+    <div class="section-header">
+        <span class="section-tag">⭐ Editor's Picks</span>
+        <h2 class="section-title">Top Recommended</h2>
+        <p class="section-sub">Niguma ki personal favourites</p>
+    </div>
+    <div class="featured-grid">
+        <div class="feat-prod">
+            <div class="fp-top"><span class="fp-emoji">🖤</span><div class="fp-brand">VAN HEUSEN</div></div>
+            <div class="fp-body">
+                <div class="fp-name">Hipster Dark Assorted Innerwear</div>
+                <div class="fp-rating">⭐ 4.8/5 · Premium Cotton · All Day Comfort</div>
+                <div class="fp-links">
+                    <a href="./van-heusen-hipster-review.html" class="fp-review">Review</a>
+                    <a href="https://amzn.to/4lTySBv" target="_blank" rel="nofollow" class="fp-buy">Buy →</a>
                 </div>
             </div>
         </div>
-    </section>
-
-    <!-- About -->
-    <section id="about" class="about-section">
-        <div class="about-glow"></div>
-        <div class="about-content">
-            <div class="about-badge">✦ About Me</div>
-            <h2>Hey, I'm <span class="gradient-text">Niguma</span></h2>
-            <p>Singer. Creator. And someone who hates bad product recommendations. I review one Amazon product at a time — honest, real, and from personal experience. No fake hype.</p>
-            <p class="disclaimer">⚡ Affiliate Disclosure: Links on this site are Amazon affiliate links. I earn a small commission if you buy — at no extra cost to you.</p>
-            <div class="social-row">
-                <a href="#" class="social-pill">📸 @niguma.dark</a>
-                <a href="#" class="social-pill">🎵 Music</a>
+        <div class="feat-prod">
+            <div class="fp-top" style="background:linear-gradient(135deg,#fce7f3,#ede9fe);"><span class="fp-emoji">💋</span><div class="fp-brand">NYX</div></div>
+            <div class="fp-body">
+                <div class="fp-name">Soft Matte Lip Cream — London</div>
+                <div class="fp-rating">⭐ 4.3/5 · Cruelty Free · 20+ Shades</div>
+                <div class="fp-links">
+                    <a href="./beauty.html#nyx" class="fp-review">See All</a>
+                    <a href="https://www.amazon.in/dp/B004LXHEX8?tag=animesh03d5-21" target="_blank" rel="nofollow" class="fp-buy">Buy →</a>
+                </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <footer>
-        <div class="footer-logo">✦ Niguma Daily</div>
-        <p>© 2026 Niguma Daily · As an Amazon Associate I earn from qualifying purchases.</p>
-    </footer>
+<section id="about" class="about-section">
+    <div class="about-glow"></div>
+    <div class="about-content">
+        <div class="about-badge">✦ About Me</div>
+        <h2>Hey, I'm <span class="gradient-text">Niguma</span></h2>
+        <p>Singer. Creator. And someone who hates bad product recommendations. I review Amazon India products across Fashion, Beauty, and Home — honest, real, from personal experience.</p>
+        <p class="disclaimer">⚡ Affiliate Disclosure: Links on this site are Amazon affiliate links. I earn a small commission if you buy — at no extra cost to you. As an Amazon Associate I earn from qualifying purchases.</p>
+        <div class="social-row">
+            <a href="#" class="social-pill">📸 @niguma.dark</a>
+            <a href="#" class="social-pill">🎵 Music</a>
+        </div>
+    </div>
+</section>
 
-    <script src="./script.js"></script>
+<footer>
+    <div class="footer-logo">✦ Niguma Daily</div>
+    <p>© 2026 Niguma Daily · As an Amazon Associate I earn from qualifying purchases.</p>
+    <p style="margin-top:8px;">
+        <a href="./fashion.html" style="color:var(--purple);margin:0 8px;text-decoration:none;">Fashion</a> ·
+        <a href="./beauty.html" style="color:var(--purple);margin:0 8px;text-decoration:none;">Beauty</a> ·
+        <a href="./home.html" style="color:var(--purple);margin:0 8px;text-decoration:none;">Home</a>
+    </p>
+</footer>
+<script src="./script.js"></script>
 </body>
 </html>
