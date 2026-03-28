@@ -26,8 +26,8 @@
         .featured-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; max-width: 1100px; margin: 0 auto; }
         .feat-prod { background: #fff; border: 1.5px solid var(--border); border-radius: 20px; overflow: hidden; transition: all 0.3s; }
         .feat-prod:hover { transform: translateY(-4px); box-shadow: 0 10px 30px var(--shadow); }
-        .fp-top { padding: 28px; text-align: center; background: linear-gradient(135deg, var(--purple-light), #fce7f3); }
-        .fp-emoji { font-size: 3.5rem; display: block; margin-bottom: 8px; }
+        .fp-top { padding: 20px; text-align: center; background: linear-gradient(135deg, var(--purple-light), #fce7f3); min-height:160px; display:flex; flex-direction:column; align-items:center; justify-content:center; }
+        .fp-top img { width:130px; height:130px; object-fit:contain; display:block; margin:0 auto 8px; }
         .fp-brand { font-size: 0.68rem; letter-spacing: 3px; color: var(--purple); font-weight: 700; margin-bottom: 6px; }
         .fp-body { padding: 20px; }
         .fp-name { font-family: 'Playfair Display', serif; font-size: 1.05rem; color: var(--text); margin-bottom: 8px; }
@@ -106,7 +106,10 @@
     </div>
     <div class="featured-grid">
         <div class="feat-prod">
-            <div class="fp-top"><span class="fp-emoji">🖤</span><div class="fp-brand">VAN HEUSEN</div></div>
+            <div class="fp-top">
+                <img src="https://ws-in.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B07JVPXV2Q&Format=_SL250_&ID=AsinImage&MarketPlace=IN&ServiceVersion=20070822&WS=1&tag=animesh03d5-21" alt="Van Heusen Hipster Innerwear">
+                <div class="fp-brand">VAN HEUSEN</div>
+            </div>
             <div class="fp-body">
                 <div class="fp-name">Hipster Dark Assorted Innerwear</div>
                 <div class="fp-rating">⭐ 4.8/5 · Premium Cotton · All Day Comfort</div>
@@ -117,7 +120,10 @@
             </div>
         </div>
         <div class="feat-prod">
-            <div class="fp-top" style="background:linear-gradient(135deg,#fce7f3,#ede9fe);"><span class="fp-emoji">💋</span><div class="fp-brand">NYX</div></div>
+            <div class="fp-top" style="background:linear-gradient(135deg,#fce7f3,#ede9fe);">
+                <img src="https://ws-in.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B004LXHEX8&Format=_SL250_&ID=AsinImage&MarketPlace=IN&ServiceVersion=20070822&WS=1&tag=animesh03d5-21" alt="NYX Soft Matte Lip Cream London">
+                <div class="fp-brand">NYX</div>
+            </div>
             <div class="fp-body">
                 <div class="fp-name">Soft Matte Lip Cream — London</div>
                 <div class="fp-rating">⭐ 4.3/5 · Cruelty Free · 20+ Shades</div>
